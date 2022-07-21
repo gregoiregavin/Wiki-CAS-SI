@@ -1,3 +1,9 @@
+a propos
+---
 Séquences pédagogiques
 Activités
 Concepts fondamentaux
+---
+éthique
+déclaration open source
+contact
