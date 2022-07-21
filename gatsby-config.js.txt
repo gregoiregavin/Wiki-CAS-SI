@@ -1,23 +1,19 @@
-require('dotenv').config({
-  path: `.env`,
-});
-
 const strapiConfig = {
-  apiURL: process.env.STRAPI_API_URL,
-  accessToken: process.env.STRAPI_TOKEN,
-  collectionTypes: [],
-  singleTypes: [],
+  apiURL: `http://localhost:1337`,
+  accessToken: `my-token`,
+  collectionTypes: [`my-collection-type`],
+  singleTypes: [`simple-single-type`],
 };
 
 module.exports = {
   siteMetadata: {
-    title: `bean`,
+    title: `Gatsby Starter Blog`,
     author: {
       name: `Kyle Mathews`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
-    description: `Wiki pour le CAS en Science Informatique pour le Secondaire 1`,
-    siteUrl: `http://localhost`,
+    description: `A starter blog demonstrating what Gatsby can do.`,
+    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       twitter: `kylemathews`,
     },

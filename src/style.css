@@ -11,7 +11,7 @@
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
   --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-2xl);
+  --maxWidth-wrapper: var(--maxWidth-4xl);
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -81,6 +81,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  box-sizing: border-box;
 }
 
 footer {
@@ -169,7 +170,7 @@ p {
 
 ul,
 ol {
-  margin-left: var(--spacing-0);
+  margin-left: var(--spacing-3);
   margin-right: var(--spacing-0);
   padding: var(--spacing-0);
   margin-bottom: var(--spacing-8);
@@ -252,11 +253,19 @@ a:focus {
 
 .global-header {
   margin-bottom: var(--spacing-12);
+  position: sticky;
+  top: 0;
+  background-color: #fff;
 }
 
 .main-heading {
   font-size: var(--fontSize-7);
   margin: 0;
+  transition: 0.2s
+}
+
+.main-heading.scrolled {
+  font-size: var(--fontSize-5);
 }
 
 .post-list-item {
