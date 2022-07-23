@@ -28,11 +28,11 @@ const Explorer = ({ data, location }) => {
     let filters = document.querySelector('.filters');
 
     filters.addEventListener('click', (e) => {
-      
+
       // Bind to filtering function
       let filterValue = e.target.getAttribute('data-filter')
-      filterValue = filterFns[ filterValue ] || filterValue
-      
+      filterValue = filterFns[filterValue] || filterValue
+
       // Filtering
       iso.arrange({ filter: filterValue })
     })
@@ -44,8 +44,8 @@ const Explorer = ({ data, location }) => {
       <Seo title='Explorer' />
       <h1>Explorer</h1>
       <div className="button-group filters">
-        <button className="button" data-filter="numberGreaterThan50">number {`> 50`}</button>
         <button class="button" data-filter="*">show all</button>
+        <button className="button" data-filter="numberGreaterThan50">number {`> 50`}</button>
       </div>
       <div className='grid' style={{ border: '1px solid #333' }}>
         <div className='element-item'>
@@ -77,6 +77,21 @@ const Explorer = ({ data, location }) => {
           <h3 className="name">Objet 6</h3>
           <p className='type'>Concept</p>
           <p className="number">22</p>
+        </div>
+        <div className='element-item'>
+          <h3 className="name">Objet 7</h3>
+          <p className='type'>Activité</p>
+          <p className="number">31</p>
+        </div>
+        <div className='element-item'>
+          <h3 className="name">Objet 8</h3>
+          <p className='type'>Séquence</p>
+          <p className="number">51</p>
+        </div>
+        <div className='element-item'>
+          <h3 className="name">Objet 9</h3>
+          <p className='type'>Concept</p>
+          <p className="number">102</p>
         </div>
       </div>
     </Layout>
