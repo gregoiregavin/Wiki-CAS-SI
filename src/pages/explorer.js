@@ -44,7 +44,7 @@ const Explorer = ({ data, location }) => {
       <Seo title='Explorer' />
       <h1>Explorer</h1>
       <div className="button-group filters">
-        <button class="button" data-filter="*">show all</button>
+        <button className="button" data-filter="*">show all</button>
         <button className="button" data-filter="numberGreaterThan50">number {`> 50`}</button>
       </div>
       <div className='grid' style={{ border: '1px solid #333' }}>

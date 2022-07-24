@@ -13,6 +13,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: ASC }
+          filter: {fields: {slug: {ne: null}}}
           limit: 1000
         ) {
           nodes {
@@ -25,7 +26,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     `
   )
-
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading your blog posts`,
@@ -60,8 +60,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
+  console.log(node.internal.type + " " + node.internal.type.startsWith('STRAPI'))
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `MarkdownRemark` && !node.internal.type.startsWith('STRAPI')) {
     const value = createFilePath({ node, getNode })
 
     createNodeField({
