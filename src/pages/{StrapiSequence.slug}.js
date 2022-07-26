@@ -13,7 +13,6 @@ const Sequence = ({ data, location }) => {
       <h1>Ma séquence</h1>
       <h2>omg ?</h2>
     </Layout>
-
   )
 }
 

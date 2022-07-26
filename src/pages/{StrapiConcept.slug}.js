@@ -13,7 +13,6 @@ const Concept = ({ data, location }) => {
       <h1>Mon concept</h1>
       <h2>omg ?</h2>
     </Layout>
-
   )
 }
 

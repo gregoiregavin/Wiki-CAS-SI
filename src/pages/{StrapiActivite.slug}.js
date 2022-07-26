@@ -13,7 +13,6 @@ const Activite = ({ data, location }) => {
       <h1>Mon activité</h1>
       <h2>omg ?</h2>
     </Layout>
-
   )
 }
 
