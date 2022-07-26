@@ -4,7 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 const Footer = () => (
     <footer className='footer'>
         <p>
-            © { new Date().getFullYear() } centre <a href='https://learn.epfl.ch/' target='_blank' rel='noreferrer'>LEARN</a> pour les sciences de l'apprentissage
+            Dernière mise à jour: { new Date().getDate() }.{ new Date().getMonth() }.{ new Date().getFullYear() }
         </p>
         <a href='https://github.com/gregoiregavin/Wiki-CAS-SI' target='_blank' rel='noreferrer' style={{marginLeft: 'auto'}}>
             <StaticImage
