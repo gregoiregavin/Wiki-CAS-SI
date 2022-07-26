@@ -11,7 +11,7 @@ const Explorer = ({ data, location }) => {
   const allActivites = data.allStrapiActivite.edges
   const allConcepts = data.allStrapiConcept.edges
   const allSequences = data.allStrapiSequence.edges
-
+  
   const GridConstruction = () => {
 
     useEffect(() => {
@@ -60,6 +60,7 @@ const Explorer = ({ data, location }) => {
             <div className='element-item' key={activite.node.id}>
               <h3 className='name'>{activite.node.Titre}</h3>
               <p className='type'>Activité</p>
+              {activite.node.slug}
             </div>
           ))
         }
@@ -68,6 +69,7 @@ const Explorer = ({ data, location }) => {
             <div className='element-item' key={concept.node.id}>
               <h3 className='name'>{concept.node.Titre}</h3>
               <p className='type'>Concept</p>
+              {concept.node.slug}
             </div>
           ))
         }
@@ -76,6 +78,7 @@ const Explorer = ({ data, location }) => {
             <div className='element-item' key={sequence.node.id}>
               <h3 className='name'>{sequence.node.Titre}</h3>
               <p className='type'>Séquence</p>
+              {sequence.node.slug}
             </div>
           ))
         }
@@ -110,8 +113,8 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          slug
           Titre
-          Slug
         }
       }
     }
@@ -119,8 +122,8 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          slug
           Titre
-          Slug
         }
       }
     }
@@ -128,8 +131,8 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          slug
           Titre
-          Slug
         }
       }
     }

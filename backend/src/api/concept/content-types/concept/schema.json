@@ -18,7 +18,7 @@
     "Contenu": {
       "type": "richtext"
     },
-    "Slug": {
+    "slug": {
       "type": "uid",
       "targetField": "Titre"
     }

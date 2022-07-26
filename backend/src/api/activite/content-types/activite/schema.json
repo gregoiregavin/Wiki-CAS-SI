@@ -20,7 +20,7 @@
       "type": "richtext",
       "required": false
     },
-    "Slug": {
+    "slug": {
       "type": "uid",
       "targetField": "Titre",
       "required": true
