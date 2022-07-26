@@ -79,42 +79,6 @@ const Explorer = ({ data, location }) => {
             </div>
           ))
         }
-        <div className='element-item'>
-          <h3 className='name'>Objet 1</h3>
-          <p className='type'>Activité</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 2</h3>
-          <p className='type'>Séquence</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 3</h3>
-          <p className='type'>Concept</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 4</h3>
-          <p className='type'>Activité</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 5</h3>
-          <p className='type'>Activité</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 6</h3>
-          <p className='type'>Concept</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 7</h3>
-          <p className='type'>Activité</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 8</h3>
-          <p className='type'>Séquence</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 9</h3>
-          <p className='type'>Concept</p>
-        </div>
       </div>
     )
   }
