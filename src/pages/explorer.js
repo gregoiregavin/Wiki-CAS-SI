@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from '../components/layout'
 import Seo from "../components/seo"
 import Isotope from 'isotope-layout/js/isotope';
@@ -11,7 +11,7 @@ const Explorer = ({ data, location }) => {
   const allActivites = data.allStrapiActivite.edges
   const allConcepts = data.allStrapiConcept.edges
   const allSequences = data.allStrapiSequence.edges
-  
+
   const GridConstruction = () => {
 
     useEffect(() => {
@@ -54,32 +54,35 @@ const Explorer = ({ data, location }) => {
     })
 
     return (
-      <div className='grid' style={{ border: '1px solid #333' }}>
+      <div className='grid' style={{ border: '1px solid #333', minHeight: '531.251px' }}>
         {
           allActivites.map(activite => (
-            <div className='element-item' key={activite.node.id}>
-              <h3 className='name'>{activite.node.Titre}</h3>
-              <p className='type'>Activité</p>
-              {activite.node.slug}
-            </div>
+            <Link href={activite.node.slug}>
+              <span style={{ display: 'block' }} className='element-item' key={activite.node.id}>
+                <h3 className='name'>{activite.node.Titre}</h3>
+                <p className='type'>Activité</p>
+              </span>
+            </Link>
           ))
         }
         {
           allConcepts.map(concept => (
-            <div className='element-item' key={concept.node.id}>
-              <h3 className='name'>{concept.node.Titre}</h3>
-              <p className='type'>Concept</p>
-              {concept.node.slug}
-            </div>
+            <Link href={concept.node.slug}>
+              <span style={{ display: 'block' }} className='element-item' key={concept.node.id}>
+                <h3 className='name'>{concept.node.Titre}</h3>
+                <p className='type'>Concept</p>
+              </span>
+            </Link>
           ))
         }
         {
           allSequences.map(sequence => (
-            <div className='element-item' key={sequence.node.id}>
-              <h3 className='name'>{sequence.node.Titre}</h3>
-              <p className='type'>Séquence</p>
-              {sequence.node.slug}
-            </div>
+            <Link href={sequence.node.slug}>
+              <span style={{ display: 'block' }} className='element-item' key={sequence.node.id}>
+                <h3 className='name'>{sequence.node.Titre}</h3>
+                <p className='type'>Séquence</p>
+              </span>
+            </Link>
           ))
         }
       </div>
