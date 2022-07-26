@@ -6,94 +6,130 @@ import Isotope from 'isotope-layout/js/isotope';
 import { useEffect } from 'react';
 
 const Explorer = ({ data, location }) => {
+
   const siteTitle = data.site.siteMetadata?.title || `Title`
+  const allActivites = data.allStrapiActivite.edges
+  const allConcepts = data.allStrapiConcept.edges
+  const allSequences = data.allStrapiSequence.edges
 
-  useEffect(() => {
+  const GridConstruction = () => {
 
-    // Isotope initialisation
-    let iso = new Isotope('.grid', {
-      itemSelector: '.element-item',
-      layoutMode: 'fitRows'
-    })
+    useEffect(() => {
 
-    // Filtering functions
-    let filterFns = {
-      numberGreaterThan50: function (itemElem) {
-        let number = itemElem.querySelector('.number').textContent
-        return parseInt(number, 10) > 50
+      // Isotope initialisation
+      let iso = new Isotope('.grid', {
+        itemSelector: '.element-item',
+        layoutMode: 'fitRows'
+      })
+
+      // Filtering functions
+      let filters = {
+        showActivities: function (itemElem) {
+          let type = itemElem.querySelector('.type').textContent
+          return type.match(/Activité/)
+        },
+        showConcepts: function (itemElem) {
+          let type = itemElem.querySelector('.type').textContent
+          return type.match(/Concept/)
+        },
+        showSequences: function (itemElem) {
+          let type = itemElem.querySelector('.type').textContent
+          return type.match(/Séquence/)
+        }
       }
-    }
 
-    // Button click binding
-    let filters = document.querySelector('.filters');
+      // Button click binding
+      let filtersBlock = document.querySelector('.filters');
 
-    filters.addEventListener('click', (e) => {
+      filtersBlock.addEventListener('click', (e) => {
 
-      // Bind to filtering function
-      let filterValue = e.target.getAttribute('data-filter')
-      filterValue = filterFns[filterValue] || filterValue
+        // Bind to filtering function
+        let filterValue = e.target.getAttribute('data-filter')
+        filterValue = filters[filterValue] || filterValue
 
-      // Filtering
-      iso.arrange({ filter: filterValue })
+        // Filtering
+        iso.arrange({ filter: filterValue })
+      })
+
     })
 
-  })
+    return (
+      <div className='grid' style={{ border: '1px solid #333' }}>
+        {
+          allActivites.map(activite => (
+            <div className='element-item' key={activite.node.id}>
+              <h3 className='name'>{activite.node.Titre}</h3>
+              <p className='type'>Activité</p>
+            </div>
+          ))
+        }
+        {
+          allConcepts.map(concept => (
+            <div className='element-item' key={concept.node.id}>
+              <h3 className='name'>{concept.node.Titre}</h3>
+              <p className='type'>Concept</p>
+            </div>
+          ))
+        }
+        {
+          allSequences.map(sequence => (
+            <div className='element-item' key={sequence.node.id}>
+              <h3 className='name'>{sequence.node.Titre}</h3>
+              <p className='type'>Séquence</p>
+            </div>
+          ))
+        }
+        <div className='element-item'>
+          <h3 className='name'>Objet 1</h3>
+          <p className='type'>Activité</p>
+        </div>
+        <div className='element-item'>
+          <h3 className="name">Objet 2</h3>
+          <p className='type'>Séquence</p>
+        </div>
+        <div className='element-item'>
+          <h3 className="name">Objet 3</h3>
+          <p className='type'>Concept</p>
+        </div>
+        <div className='element-item'>
+          <h3 className="name">Objet 4</h3>
+          <p className='type'>Activité</p>
+        </div>
+        <div className='element-item'>
+          <h3 className="name">Objet 5</h3>
+          <p className='type'>Activité</p>
+        </div>
+        <div className='element-item'>
+          <h3 className="name">Objet 6</h3>
+          <p className='type'>Concept</p>
+        </div>
+        <div className='element-item'>
+          <h3 className="name">Objet 7</h3>
+          <p className='type'>Activité</p>
+        </div>
+        <div className='element-item'>
+          <h3 className="name">Objet 8</h3>
+          <p className='type'>Séquence</p>
+        </div>
+        <div className='element-item'>
+          <h3 className="name">Objet 9</h3>
+          <p className='type'>Concept</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title='Explorer' />
       <h1>Explorer</h1>
-      <div className="button-group filters">
-        <button className="button" data-filter="*">show all</button>
-        <button className="button" data-filter="numberGreaterThan50">number {`> 50`}</button>
+      <div className='button-group filters'>
+        <button className='button' data-filter='*'>show all</button>
+        <button className='button' data-filter='showActivities'>Activités</button>
+        <button className='button' data-filter='showConcepts'>Concepts</button>
+        <button className='button' data-filter='showSequences'>Séquences</button>
       </div>
-      <div className='grid' style={{ border: '1px solid #333' }}>
-        <div className='element-item'>
-          <h3 className='name'>Objet 1</h3>
-          <p className='type'>Activité</p>
-          <p className="number">80</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 2</h3>
-          <p className='type'>Séquence</p>
-          <p className="number">30</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 3</h3>
-          <p className='type'>Concept</p>
-          <p className="number">160</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 4</h3>
-          <p className='type'>Activité</p>
-          <p className="number">43</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 5</h3>
-          <p className='type'>Activité</p>
-          <p className="number">99</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 6</h3>
-          <p className='type'>Concept</p>
-          <p className="number">22</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 7</h3>
-          <p className='type'>Activité</p>
-          <p className="number">31</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 8</h3>
-          <p className='type'>Séquence</p>
-          <p className="number">51</p>
-        </div>
-        <div className='element-item'>
-          <h3 className="name">Objet 9</h3>
-          <p className='type'>Concept</p>
-          <p className="number">102</p>
-        </div>
-      </div>
+      <GridConstruction activite={allActivites} concepts={allConcepts} />
     </Layout>
   )
 }
@@ -105,6 +141,30 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    allStrapiActivite {
+      edges {
+        node {
+          id
+          Titre
+        }
+      }
+    }
+    allStrapiConcept {
+      edges {
+        node {
+          id
+          Titre
+        }
+      }
+    }
+    allStrapiSequence {
+      edges {
+        node {
+          id
+          Titre
+        }
       }
     }
   }

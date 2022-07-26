@@ -5,7 +5,17 @@ require('dotenv').config({
 const strapiConfig = {
   apiURL: process.env.STRAPI_API_URL,
   accessToken: process.env.STRAPI_TOKEN,
-  collectionTypes: ['activite'],
+  collectionTypes: [
+    {
+      singularName: 'activite'
+    },
+    {
+      singularName: 'concept'
+    },
+    {
+      singularName: 'sequence'
+    }
+  ],
   singleTypes: [],
 };
 
@@ -23,10 +33,10 @@ module.exports = {
     },
   },
   plugins: [
-    /* {
+    {
       resolve: `gatsby-source-strapi`,
       options: strapiConfig,
-    }, */
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
