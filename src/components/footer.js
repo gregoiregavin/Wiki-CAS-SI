@@ -3,18 +3,16 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 const Footer = () => (
     <footer className='footer'>
-        © {new Date().getFullYear()}, construit avec
-        {` `}
-        <a href='https://www.gatsbyjs.com'>Gatsby</a> et
-        {` `}
-        <a href='https://strapi.io/'>Strapi</a>
-        <a href='/'>
+        <p>
+            © { new Date().getFullYear() } centre <a href='https://learn.epfl.ch/' target='_blank' rel='noreferrer'>LEARN</a> pour les sciences de l'apprentissage
+        </p>
+        <a href='https://github.com/gregoiregavin/Wiki-CAS-SI' target='_blank' rel='noreferrer' style={{marginLeft: 'auto'}}>
             <StaticImage
                 src="../images/GitHub-Mark-120px-plus.png"
                 alt="GitHub"
                 placeholder="blurred"
                 layout="fixed"
-                width={50}
+                width={30}
             />
         </a>
     </footer>

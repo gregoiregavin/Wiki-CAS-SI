@@ -264,6 +264,7 @@ a:focus {
   border-bottom: solid 2px var(--color-heading);
   display: flex;
   flex-direction: row;
+  z-index: 100;
 }
 
 .global-header.scrolled {
@@ -305,9 +306,8 @@ a:focus {
 
 .footer {
   display: flex;
+  border-top: solid 2px var(--color-heading);
 }
-
-.footer
 
 .post-list-item {
   margin-bottom: var(--spacing-8);

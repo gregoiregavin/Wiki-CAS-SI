@@ -34,10 +34,7 @@ const Header = (title) => {
                         <Link to='/explorer'>explorer</Link>
                     </li>
                     <li>
-                        <Link to=''>how to</Link>
-                    </li>
-                    <li>
-                        <Link to=''>a propos</Link>
+                        <Link to='/a-propos'>a propos</Link>
                     </li>
                 </ul>
             </header>

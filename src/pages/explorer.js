@@ -86,9 +86,8 @@ const Explorer = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title='Explorer' />
-      <h1>Explorer</h1>
       <div className='button-group filters'>
-        <button className='button' data-filter='*'>show all</button>
+        <button className='button' data-filter='*'>Tout montrer</button>
         <button className='button' data-filter='showActivities'>Activités</button>
         <button className='button' data-filter='showConcepts'>Concepts</button>
         <button className='button' data-filter='showSequences'>Séquences</button>
@@ -112,6 +111,7 @@ export const pageQuery = graphql`
         node {
           id
           Titre
+          Slug
         }
       }
     }
@@ -120,6 +120,7 @@ export const pageQuery = graphql`
         node {
           id
           Titre
+          Slug
         }
       }
     }
@@ -128,6 +129,7 @@ export const pageQuery = graphql`
         node {
           id
           Titre
+          Slug
         }
       }
     }
