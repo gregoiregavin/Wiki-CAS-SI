@@ -5,7 +5,7 @@
   Bean
 </h1>
 
-Bean is a simple and open source website based on Gatsby and Strapi. Its mainly focus is to provide a simple, adaptable and scalable structure for both frontend and backend users. Bean has been developed at the EPFL to provide a tool for teaching in the [CAS pour l'enseignement de la Science Informatique en secondaire 1](https://www.epfl.ch/education/educational-initiatives/fr/le-projet-edunum-le-cas-si/cas-si
+Bean is a simple and open source website based on Gatsby and Strapi. Its mainly focus is to provide a simple, adaptable and scalable structure for both frontend and backend users. Bean has been developed at the EPFL to provide a tool for teaching in the [CAS pour l'enseignement de la Science Informatique en secondaire 1](https://www.epfl.ch/education/educational-initiatives/fr/le-projet-edunum-le-cas-si/cas-si)
 
 Currently, the project is under development and is not deployed online.
 
