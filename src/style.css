@@ -298,8 +298,6 @@ a:focus {
   list-style-type: none;
   margin-left: auto;
   font-size: var(--fontSize-2);
-  font-family: var(--font-heading);
-  font-weight: var(--fontWeight-medium);
 }
 
 .main-nav.scrolled {
