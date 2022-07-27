@@ -1,12 +1,22 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
+    <img alt="Gatsby" src="https://i.imgur.com/aYAwoNa.png" width="60" />
 </p>
 <h1 align="center">
-  Gatsby's blog starter
+  Bean
 </h1>
+
+Bean is a simple and open source website based on Gatsby and Strapi. Its mainly focus is to provide a simple, adaptable and scalable structure for both frontend and backend users. Bean has been developed at the EPFL to provide a tool for teaching in the [CAS pour l'enseignement de la Science Informatique en secondaire 1](https://www.epfl.ch/education/educational-initiatives/fr/le-projet-edunum-le-cas-si/cas-si
+
+Currently, the project is under development and is not deployed online.
+
+## 🚀 Installation
+
+### Prerequisites
+...
+
+## 🧐 Roadmap
+
+## 🎓 Ressources
 
 Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
