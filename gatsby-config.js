@@ -33,10 +33,10 @@ module.exports = {
     },
   },
   plugins: [
-    {
+    /* {
       resolve: `gatsby-source-strapi`,
       options: strapiConfig,
-    },
+    }, */
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
