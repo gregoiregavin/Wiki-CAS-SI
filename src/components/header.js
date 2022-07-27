@@ -18,12 +18,12 @@ const Header = (title) => {
                 globalHeader.classList.add('scrolled')
                 mainHeading.classList.add('hidden')
                 mainLogo.classList.add('scrolled')
-                mainNav.classList.add('scrolled')
+                mainNav.classList.add('hidden')
             } else {
                 globalHeader.classList.remove('scrolled')
                 mainHeading.classList.remove('hidden')
                 mainLogo.classList.remove('scrolled')
-                mainNav.classList.remove('scrolled')
+                mainNav.classList.remove('hidden')
             }
         }
     });

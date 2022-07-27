@@ -279,7 +279,7 @@ a:focus {
 
 .main-logo.scrolled {
   max-height: var(--spacing-6);
-  margin-top: var(--spacing-1);
+  margin-top: var(--spacing-2);
 }
 
 .main-heading {
@@ -301,7 +301,6 @@ a:focus {
 
   font-family: var(--font-heading);
   font-weight: var(--fontWeight-medium);
-  transition: 0.2s;
 }
 
 .main-nav.scrolled {
