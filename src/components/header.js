@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { useEffect } from 'react'
 import logo from '../images/bean-green.png'
+import searchIcon from '../images/search-icon.png'
 
 const Header = (title) => {
 
@@ -15,12 +16,12 @@ const Header = (title) => {
 
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
                 globalHeader.classList.add('scrolled')
-                mainHeading.classList.add('scrolled')
+                mainHeading.classList.add('hidden')
                 mainLogo.classList.add('scrolled')
                 mainNav.classList.add('scrolled')
             } else {
                 globalHeader.classList.remove('scrolled')
-                mainHeading.classList.remove('scrolled')
+                mainHeading.classList.remove('hidden')
                 mainLogo.classList.remove('scrolled')
                 mainNav.classList.remove('scrolled')
             }
@@ -31,7 +32,7 @@ const Header = (title) => {
         <>
             <header className='global-header'>
                 <div>
-                    <img className='main-logo' src={logo} />
+                    <img className='main-logo' src={logo}/>
                 </div>
                 <h1 className='main-heading'>
                     <Link to='/'>{title.title}</Link>
@@ -42,6 +43,9 @@ const Header = (title) => {
                     </li>
                     <li>
                         <Link to='/a-propos'>a propos</Link>
+                    </li>
+                    <li>
+                    <img className='search-icon' src={searchIcon} width='30'/>
                     </li>
                 </ul>
             </header>

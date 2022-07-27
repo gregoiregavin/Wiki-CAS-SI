@@ -274,6 +274,7 @@ a:focus {
 .main-logo {
   max-height: var(--spacing-10);
   margin-top: var(--spacing-1);
+  transition: 0.2s;
 }
 
 .main-logo.scrolled {
@@ -284,7 +285,6 @@ a:focus {
 .main-heading {
   font-size: var(--fontSize-7);
   margin: 0 var(--spacing-4);
-  transition: 0.2s;
 }
 
 .main-heading.scrolled {
@@ -300,6 +300,7 @@ a:focus {
   font-size: var(--fontSize-2);
   font-family: var(--font-heading);
   font-weight: var(--fontWeight-medium);
+  transition: 0.2s;
 }
 
 .main-nav.scrolled {
