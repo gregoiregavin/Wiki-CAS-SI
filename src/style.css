@@ -299,11 +299,16 @@ a:focus {
   margin-left: auto;
   font-size: var(--fontSize-2);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   font-family: var(--font-heading);
   font-weight: var(--fontWeight-medium);
   transition: 0.2s;
 >>>>>>> parent of 9f33e03 (Revert "green bean")
+=======
+  font-family: var(--font-heading);
+  font-weight: var(--fontWeight-medium);
+>>>>>>> parent of 7a08eae (Revert "Update style.css")
 }
 
 .main-nav.scrolled {
