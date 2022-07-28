@@ -5,11 +5,9 @@
   Bean
 </h1>
 
-Bean is an exploration website based on open source technologies such as [Gatsby](https://www.gatsbyjs.com/) and [Strapi](https://strapi.io/). Its mainly focused is to provide a simple, adaptable and scalable structure for both frontend and backend users. Bean is developed at the EPFL, aiming at first to provide a tool for teaching in the [CAS pour l'enseignement de la Science Informatique en secondaire 1](https://www.epfl.ch/education/educational-initiatives/fr/le-projet-edunum-le-cas-si/cas-si).
+WIKI-CAS-SI1 (pronounce '**Bean**') is an exploration website based on open source technologies such as [Gatsby](https://www.gatsbyjs.com/) and [Strapi](https://strapi.io/). These have been choosen for their high adaptable and scalable structure for both frontend and backend users. Bean is developed at the EPFL, aiming at first to provide a tool for teaching in the [CAS pour l'enseignement de la Science Informatique en secondaire 1](https://www.epfl.ch/education/educational-initiatives/fr/le-projet-edunum-le-cas-si/cas-si).
 
 _Please note that the project is under development and is not deployed nor testable online._
-
-## :green_heart: Philosophy
 
 ## 🚀 Installation
 
@@ -41,7 +39,7 @@ _Should work on any Unix system, yet I tested on Ubuntu 22.04 LTS only._
     gatsby --version # expected : Gatsby CLI version: 4.16.0
     ```
     
-_If you get stucked at Node, Git or Gatsby CLI installation, additional help can be found on Gatsby's official tutorial [Part 0 : Set Up Your Development Environnment](https://www.gatsbyjs.com/docs/tutorial/part-0/)._
+_If you get stucked at Node, Git or Gatsby CLI installation, additional help can be found on Gatsby's official tutorial: [Part 0 : Set Up Your Development Environnment](https://www.gatsbyjs.com/docs/tutorial/part-0/)._
 
 3. **Clone this project**
 
@@ -90,3 +88,18 @@ _If you get stucked at Node, Git or Gatsby CLI installation, additional help can
 - [ ] coucou
 - [ ] casd
 - [x] asdsad
+
+## :purple_heart: Philosophy
+
+Bean is a project with some philosophical and societal values we intent to share in the field of education.
+
+choix des technos : 
+
+Inclusive
+Simple UX/UI
+Open Data
+User rights management
+Scalability
+Portability
+Accessibility
+Vanilla
