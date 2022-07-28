@@ -55,7 +55,7 @@ _If you get stucked at Node, Git or Gatsby CLI installation, additional help can
     ```
 4. **Install front-end dependencies**
 
-    Go to the project root and install [Gatsby dependencies](https://github.com/gregoiregavin/Wiki-CAS-SI/blob/master/package.json) :
+    Go to the project root and install all [Gatsby dependencies](https://github.com/gregoiregavin/Wiki-CAS-SI/blob/master/package.json) :
     
     ```shell
     
@@ -69,7 +69,7 @@ _If you get stucked at Node, Git or Gatsby CLI installation, additional help can
 
 5. **Install back-end dependencies**
 
-    Go to the project `/backend` folder and install Strapi depedencies :
+    Go to the project `/backend` folder and install all Strapi depedencies :
     
 
     ```shell
