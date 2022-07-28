@@ -32,7 +32,7 @@ const Header = (title) => {
         <>
             <header className='global-header'>
                 <div>
-                    <img className='main-logo' src={logo}/>
+                    <img className='main-logo' src={logo} alt='a green bean' />
                 </div>
                 <h1 className='main-heading'>
                     <Link to='/'>{title.title}</Link>
@@ -45,7 +45,7 @@ const Header = (title) => {
                         <Link to='/a-propos'>a propos</Link>
                     </li>
                     <li>
-                    <img className='search-icon' src={searchIcon} width='30'/>
+                        <img className='search-icon' src={searchIcon} width='30' alt='search icon' />
                     </li>
                 </ul>
             </header>
