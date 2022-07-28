@@ -22,7 +22,7 @@ _Should work on any Unix system, yet I tested on Ubuntu 22.04 LTS only._
     node --version # expected : v.16.x.x
     ```
      
-     [**GitHub Desktop**](https://git-scm.com/downloads) **(recommended)** to clone this repository. GitHub Desktop provides a nice GUI, keeping things simple and removing some complexity like the use of ssh-agent. For Ubuntu, see [github_ubuntu_desktop.sh](https://gist.github.com/berkorbay/6feda478a00b0432d13f1fc0a50467f1).
+     [**GitHub Desktop**](https://desktop.github.com/) **(recommended)** to clone this repository. GitHub Desktop provides a nice GUI, keeping things simple and removing some complexity like the use of ssh-agent. For Ubuntu, see [github_ubuntu_desktop.sh](https://gist.github.com/berkorbay/6feda478a00b0432d13f1fc0a50467f1).
      
      _You may need to restart your computer or terminal to complete installations._
 
@@ -39,7 +39,7 @@ _Should work on any Unix system, yet I tested on Ubuntu 22.04 LTS only._
     gatsby --version # expected : Gatsby CLI version: 4.16.0
     ```
     
-_If you get stucked at Node, Git or Gatsby CLI installation, additional help can be found on Gatsby's official tutorial: [Part 0 : Set Up Your Development Environnment](https://www.gatsbyjs.com/docs/tutorial/part-0/)._
+_If you get stucked at Node, Git or Gatsby CLI installation, additional help can be found [here](https://www.gatsbyjs.com/docs/tutorial/part-0/)._
 
 3. **Clone this project**
 
