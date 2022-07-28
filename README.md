@@ -55,7 +55,7 @@ _If you get stucked at Node, Git or Gatsby CLI installation, additional help can
     ```
 4. **Install front-end dependencies**
 
-    Go to the project root and install Gatsby dependencies :
+    Go to the project root and install [Gatsby dependencies](https://github.com/gregoiregavin/Wiki-CAS-SI/blob/master/package.json) :
     
     ```shell
     
