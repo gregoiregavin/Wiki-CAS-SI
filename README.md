@@ -84,4 +84,7 @@ _If you get stucked at Node, Git or Gatsby CLI installation, additional help can
 
 ## :triangular_ruler: Configuration
     
-## 🧐 Roadmap
+## :turtle: Roadmap
+- [ ] coucou
+- [ ] casd
+- [x] asdsad
