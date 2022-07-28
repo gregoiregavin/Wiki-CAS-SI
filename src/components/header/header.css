@@ -1,60 +1,40 @@
 .global-header {
-    margin-bottom: var(--spacing-12);
-    position: sticky;
     top: 0;
-    background-color: #fff;
-    border-bottom: solid 2px var(--color-heading);
+    position: sticky;
     display: flex;
     flex-direction: row;
-    z-index: 100;
-  }
-  
-  .global-header.scrolled {
-    height: var(--spacing-10);
+    align-items: center;
+    background-color: #fff;
+    padding-bottom: var(--spacing-3);
+    margin-bottom: var(--spacing-12);
+    border-bottom: solid 2px var(--color-heading);
   }
   
   .main-logo {
     max-height: var(--spacing-10);
-    margin-top: var(--spacing-1);
     transition: 0.2s;
-  }
-  
-  .main-logo.scrolled {
-    max-height: var(--spacing-6);
-    margin-top: var(--spacing-2);
   }
   
   .main-heading {
     font-size: var(--fontSize-7);
-    margin: 0 var(--spacing-4);
-  }
-  
-  .main-heading.scrolled {
-    font-size: var(--fontSize-4);
-    margin-top: var(--spacing-1);
-    color: var(--color-heading);
+    margin: 0 0 0 var(--spacing-3);
   }
   
   .main-nav {
-    display: flex;
+    align-self: flex-end;
+    display: table;
+    margin: 0 0 0 auto;
     list-style-type: none;
-    margin-left: auto;
     font-size: var(--fontSize-2);
-  
     font-family: var(--font-heading);
     font-weight: var(--fontWeight-medium);
   }
   
-  .main-nav.scrolled {
-    margin-top: var(--spacing-0);
-    margin-bottom: var(--spacing-1);
-    font-size: var(--fontSize-1);
-  }
-  
   .main-nav li {
-    margin-top: auto;
-    margin-bottom: var(--spacing-0);
-    padding-left: var(--spacing-4);
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0;
+    padding-left: var(--spacing-6);
   }
   
   .main-nav a {
@@ -64,4 +44,25 @@
   
   .main-nav a:hover {
     text-decoration: underline;
+  }
+
+  .search-icon {
+    align-self: flex-end;
+    margin-left: var(--spacing-6);
+  }
+
+  /* scrollTop */
+  .global-header.scrolled {
+    height: var(--spacing-12);
+    margin-bottom: var(--spacing-6);
+  }
+
+  .main-heading.scrolled {
+    max-height: var(--spacing-8);
+    visibility: hidden;
+  }
+
+  .main-logo.scrolled {
+    max-height: var(--spacing-8);
+    margin-top: var(--spacing-3);
   }
