@@ -5,14 +5,24 @@
   Bean
 </h1>
 
-Bean is a simple and open source website based on [Gatsby](https://www.gatsbyjs.com/) and [Strapi](https://strapi.io/). Its mainly focus is to provide a simple, adaptable and scalable structure for both frontend and backend users. Bean has been developed at the EPFL to provide a tool for teaching in the [CAS pour l'enseignement de la Science Informatique en secondaire 1](https://www.epfl.ch/education/educational-initiatives/fr/le-projet-edunum-le-cas-si/cas-si).
+Bean is a simple and open source website based on [Gatsby](https://www.gatsbyjs.com/) and [Strapi](https://strapi.io/). Its mainly focused is to provide a simple, adaptable and scalable structure for both frontend and backend users. Bean is developed at the EPFL, aiming to provide a tool for teaching in the [CAS pour l'enseignement de la Science Informatique en secondaire 1](https://www.epfl.ch/education/educational-initiatives/fr/le-projet-edunum-le-cas-si/cas-si).
 
-Currently, the project is under development and is not deployed online.
+_Please note that the project is under development and is not deployed nor testable online._
+
+## 💻 Environment
+
 
 ## 🚀 Installation
 
-0. **Prerequisites**
+_Should work on any UNIX system, yet I tested it on Ubuntu 22.04 LTS only._
 
+0. **Prerequisites** 
+    
+    
+    
+    - [Node.js](https://nodejs.org/en/download/): to run our local Javascript server, execute build commands and install packages via [NPM (Node Package Manager)](https://www.npmjs.com/)
+    - []
+    
     Node.JS, Gatsby-cli, Strapi
     
 1. **Git clone**
