@@ -14,27 +14,37 @@ _Please note that the project is under development and is not deployed nor testa
 
 ## 🚀 Installation
 
-_Should work on any UNIX system, yet I tested it on Ubuntu 22.04 LTS only._
+_Should work on any Unix system, yet I tested on Ubuntu 22.04 LTS only._
 
-0. **Prerequisites** 
-    
-    
-    
-    - [Node.js](https://nodejs.org/en/download/): to run our local Javascript server, execute build commands and install packages via [NPM (Node Package Manager)](https://www.npmjs.com/)
-    - []
-    
-    Node.JS, Gatsby-cli, Strapi
-    
-1. **Git clone**
+1. **Prerequisites**
 
-2. **Gatsby installation**
+     [**Node.js**](https://nodejs.org/en/download/) _(v.16.x.x LTS)_ to run the local Javascript server, execute frontend and backend commands and install packages via the Node Package Manager (NPM).
+     
+     [**Git**](https://git-scm.com/downloads) to clone this Git repository and control versioning.
+     
+     ```shell
+     # to check if Node is installed
+    node --version # expected : v.16.x.x
+    
+    # to check if Git is installed
+    git --version # expected : 2.3
+     ```
+     
+     _You may need to restart your computer or terminal to complete installations._
 
-    Description
+2. **Gatsby CLI installation**
 
+    Install globally the Gatsby Command Line Interface (CLI) NPM package.    
+    
     ```shell
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog
+    # install gatsby cli
+    npm install -g gatsby-cli
+    
+    # check installation
+    gatsby --version # expected : Gatsby CLI version: 4.16.0
     ```
+    
+_If you get stucked at Node, Git or Gatsby CLI installation, additional help can be found on Gatsby's official tutorial [Part 0 : Set Up Your Development Environnment](https://www.gatsbyjs.com/docs/tutorial/part-0/)._
 
 ## 🧐 Roadmap
 
