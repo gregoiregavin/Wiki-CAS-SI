@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="Gatsby" src="https://i.imgur.com/aYAwoNa.png" width="60" />
+    <img alt="Gatsby" src="https://i.imgur.com/aYAwoNa.png" width="200" />
 </p>
 <h1 align="center">
   Bean
