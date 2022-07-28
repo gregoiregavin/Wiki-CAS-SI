@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import { useEffect } from 'react'
-import logo from '../images/bean-green.png'
-import searchIcon from '../images/search-icon.png'
+import logo from '../../images/bean-green.png'
+import searchIcon from '../../images/search-icon.png'
+import './header.css'
 
 const Header = (title) => {
 
