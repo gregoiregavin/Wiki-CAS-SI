@@ -8,9 +8,9 @@ import { useEffect } from 'react';
 const Explorer = ({ data, location }) => {
 
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const allActivites = data.allStrapiActivite.edges
-  //const allConcepts = data.allStrapiConcept.edges
-  //const allSequences = data.allStrapiSequence.edges
+  const allActivites = data.allStrapiActivite?.edges
+  const allConcepts = data.allStrapiConcept?.edges
+  const allSequences = data.allStrapiSequence?.edges
 
   const GridConstruction = () => {
 
@@ -56,35 +56,38 @@ const Explorer = ({ data, location }) => {
     return (
       <div className='grid' style={{ border: '1px solid #333', minHeight: '531.251px' }}>
         {
-          allActivites.map(activite => (
-            <a href={activite.node.slug} key={activite.node.id}>
-              <span style={{ display: 'block' }} className='element-item' key={activite.node.id}>
-                <h3 className='name'>{activite.node.titre}</h3>
-                <p className='type'>Activité</p>
-              </span>
-            </a>
-          ))
+          allActivites ? 
+            allActivites.map(activite => (
+              <a href={activite.node.slug} key={activite.node.id}>
+                <span style={{ display: 'block' }} className='element-item' key={activite.node.id}>
+                  <h3 className='name'>{activite.node.titre}</h3>
+                  <p className='type'>Activité</p>
+                </span>
+              </a>
+            )) : ''
         }
-        {/* {
-          allConcepts.map(concept => (
-            <Link href={concept.node.slug}>
-              <span style={{ display: 'block' }} className='element-item' key={concept.node.id}>
-                <h3 className='name'>{concept.node.Titre}</h3>
-                <p className='type'>Concept</p>
-              </span>
-            </Link>
-          ))
-        } */}
-        {/* {
-          allSequences.map(sequence => (
-            <Link href={sequence.node.slug}>
-              <span style={{ display: 'block' }} className='element-item' key={sequence.node.id}>
-                <h3 className='name'>{sequence.node.Titre}</h3>
-                <p className='type'>Séquence</p>
-              </span>
-            </Link>
-          ))
-        } */}
+        {
+          allConcepts ? 
+            allConcepts.map(concept => (
+              <a href={concept.node.slug}>
+                <span style={{ display: 'block' }} className='element-item' key={concept.node.id}>
+                  <h3 className='name'>{concept.node.Titre}</h3>
+                  <p className='type'>Concept</p>
+                </span>
+              </a>
+            )) : ''
+        }
+        {
+          allSequences ?
+            allSequences.map(sequence => (
+              <a href={sequence.node.slug}>
+                <span style={{ display: 'block' }} className='element-item' key={sequence.node.id}>
+                  <h3 className='name'>{sequence.node.Titre}</h3>
+                  <p className='type'>Séquence</p>
+                </span>
+              </a>
+            )) : ''
+        }
       </div>
     )
   }
