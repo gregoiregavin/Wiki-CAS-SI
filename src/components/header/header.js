@@ -2,21 +2,36 @@ import * as React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { useEffect } from 'react'
 import logoGreen from '../../images/bean-green.png'
+import logoPurple from '../../images/bean-purple.png'
 import searchIcon from '../../images/search-icon.png'
 import './header.css'
 
-const Header = (title) => {
+const Header = ( title ) => {
 
     let root = document.documentElement
     let currentTheme = ''
 
-    const ThemeToggler = (publicURL) => {   // Faire passer la data depuis GraphiQL (changé la query de file vers allFile -> array d'objets)
+    const greenBean = 'bean-icon.png'
+    const purpleBean = 'bean-purple.png'
 
+    let purpleBeanURL = ''
+
+    const ThemeToggler = ( nodes ) => {
+
+        nodes.map(function(elem) {  
+            
+            if (elem.base === purpleBean) {
+                purpleBeanURL = elem.publicURL
+            }
+
+            console.log(purpleBeanURL)
+        })
+        
         let logo = document.getElementById('main-logo')
 
         if (currentTheme === '') {
             root.classList.toggle('purple')
-            logo.setAttribute('src', publicURL) // ET LA
+            logo.setAttribute('src', purpleBeanURL)
             currentTheme = 'purple'
         } else {
             root.classList.toggle('purple')
@@ -69,16 +84,13 @@ const Header = (title) => {
                         id='main-logo' 
                         src={logoGreen} 
                         alt='a green bean' 
-                        onClick={() => ThemeToggler(data.file.publicURL)} // ET LA
+                        onClick={() => ThemeToggler(data.allFile.nodes)}
                         onKeyDown={ThemeToggler} 
                         role='button'
                     />
                     <h1 id='main-heading'>
                         <Link to='/'>{title.title}</Link>
                     </h1>
-                    {
-                        console.log(data.allFile.nodes) // LA
-                    }
                     <ul id='main-nav'>
                         <li>
                             <Link to='/explorer'>explorer</Link>
