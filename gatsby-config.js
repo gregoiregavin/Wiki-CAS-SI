@@ -6,9 +6,9 @@ const strapiConfig = {
   apiURL: process.env.STRAPI_API_URL,
   accessToken: process.env.STRAPI_TOKEN,
   collectionTypes: [
-    /* {
+    {
       singularName: 'activite'
-    },
+    },/*
     {
       singularName: 'concept'
     },
@@ -23,13 +23,13 @@ module.exports = {
   siteMetadata: {
     title: `bean`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Grégoire Gavin`,
+      summary: `qui essaie de s'en sortir avec tous ces stacks.`,
     },
     description: `Wiki pour le CAS en Science Informatique pour le Secondaire 1`,
     siteUrl: `http://localhost`,
     social: {
-      twitter: `kylemathews`,
+      twitter: ``,
     },
   },
   plugins: [

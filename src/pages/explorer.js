@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from '../components/layout'
 import Seo from "../components/seo"
 import Isotope from 'isotope-layout/js/isotope';
@@ -9,8 +9,8 @@ const Explorer = ({ data, location }) => {
 
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const allActivites = data.allStrapiActivite.edges
-  const allConcepts = data.allStrapiConcept.edges
-  const allSequences = data.allStrapiSequence.edges
+  //const allConcepts = data.allStrapiConcept.edges
+  //const allSequences = data.allStrapiSequence.edges
 
   const GridConstruction = () => {
 
@@ -57,15 +57,15 @@ const Explorer = ({ data, location }) => {
       <div className='grid' style={{ border: '1px solid #333', minHeight: '531.251px' }}>
         {
           allActivites.map(activite => (
-            <Link href={activite.node.slug}>
+            <a href={activite.node.slug} key={activite.node.id}>
               <span style={{ display: 'block' }} className='element-item' key={activite.node.id}>
-                <h3 className='name'>{activite.node.Titre}</h3>
+                <h3 className='name'>{activite.node.titre}</h3>
                 <p className='type'>Activité</p>
               </span>
-            </Link>
+            </a>
           ))
         }
-        {
+        {/* {
           allConcepts.map(concept => (
             <Link href={concept.node.slug}>
               <span style={{ display: 'block' }} className='element-item' key={concept.node.id}>
@@ -74,8 +74,8 @@ const Explorer = ({ data, location }) => {
               </span>
             </Link>
           ))
-        }
-        {
+        } */}
+        {/* {
           allSequences.map(sequence => (
             <Link href={sequence.node.slug}>
               <span style={{ display: 'block' }} className='element-item' key={sequence.node.id}>
@@ -84,7 +84,7 @@ const Explorer = ({ data, location }) => {
               </span>
             </Link>
           ))
-        }
+        } */}
       </div>
     )
   }
@@ -98,7 +98,7 @@ const Explorer = ({ data, location }) => {
         <button className='button' data-filter='showConcepts'>Concepts</button>
         <button className='button' data-filter='showSequences'>Séquences</button>
       </div>
-      <GridConstruction activite={allActivites} concepts={allConcepts} />
+      <GridConstruction activite={allActivites} />
     </Layout>
   )
 }
@@ -117,25 +117,7 @@ export const pageQuery = graphql`
         node {
           id
           slug
-          Titre
-        }
-      }
-    }
-    allStrapiConcept {
-      edges {
-        node {
-          id
-          slug
-          Titre
-        }
-      }
-    }
-    allStrapiSequence {
-      edges {
-        node {
-          id
-          slug
-          Titre
+          titre
         }
       }
     }
