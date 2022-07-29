@@ -10,8 +10,6 @@ const Activite = ({ data, location }) => {
   const activite = data.strapiActivite
   const html = activite.childStrapiActiviteDescriptionTextnode.childMarkdownRemark.html
 
-  console.log(html)
-
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title='Activite' />
@@ -24,7 +22,7 @@ const Activite = ({ data, location }) => {
 export default Activite
 
 export const pageQuery = graphql`
-  query PageQuery ($id: String){
+  query StrapiActivitePageQuery ($id: String){
     site {
       siteMetadata {
         title

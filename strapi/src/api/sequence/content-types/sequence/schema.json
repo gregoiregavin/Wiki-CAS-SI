@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "activites",
+  "collectionName": "sequences",
   "info": {
-    "singularName": "activite",
-    "pluralName": "activites",
-    "displayName": "Activité",
-    "description": ""
+    "singularName": "sequence",
+    "pluralName": "sequences",
+    "displayName": "Séquence"
   },
   "options": {
     "draftAndPublish": true
@@ -14,15 +13,16 @@
   "attributes": {
     "titre": {
       "type": "string",
-      "required": true,
-      "unique": true
+      "unique": true,
+      "required": true
     },
     "slug": {
       "type": "uid",
-      "required": true
+      "targetField": "titre"
     },
     "description": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     }
   }
 }

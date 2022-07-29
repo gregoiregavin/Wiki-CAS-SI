@@ -59,7 +59,7 @@ const Explorer = ({ data, location }) => {
           allActivites ? 
             allActivites.map(activite => (
               <a href={activite.node.slug} key={activite.node.id}>
-                <span style={{ display: 'block' }} className='element-item' key={activite.node.id}>
+                <span style={{ display: 'block', padding: '15px'}} className='element-item' key={activite.node.id}>
                   <h3 className='name'>{activite.node.titre}</h3>
                   <p className='type'>Activité</p>
                 </span>
@@ -69,9 +69,9 @@ const Explorer = ({ data, location }) => {
         {
           allConcepts ? 
             allConcepts.map(concept => (
-              <a href={concept.node.slug}>
-                <span style={{ display: 'block' }} className='element-item' key={concept.node.id}>
-                  <h3 className='name'>{concept.node.Titre}</h3>
+              <a href={concept.node.slug} key={concept.node.id}>
+                <span style={{ display: 'block', padding: '15px' }} className='element-item' key={concept.node.id}>
+                  <h3 className='name'>{concept.node.titre}</h3>
                   <p className='type'>Concept</p>
                 </span>
               </a>
@@ -80,9 +80,9 @@ const Explorer = ({ data, location }) => {
         {
           allSequences ?
             allSequences.map(sequence => (
-              <a href={sequence.node.slug}>
-                <span style={{ display: 'block' }} className='element-item' key={sequence.node.id}>
-                  <h3 className='name'>{sequence.node.Titre}</h3>
+              <a href={sequence.node.slug} key={sequence.node.id}>
+                <span style={{ display: 'block', padding: '15px' }} className='element-item' key={sequence.node.id}>
+                  <h3 className='name'>{sequence.node.titre}</h3>
                   <p className='type'>Séquence</p>
                 </span>
               </a>
@@ -116,6 +116,24 @@ export const pageQuery = graphql`
       }
     }
     allStrapiActivite {
+      edges {
+        node {
+          id
+          slug
+          titre
+        }
+      }
+    }
+    allStrapiConcept {
+      edges {
+        node {
+          id
+          slug
+          titre
+        }
+      }
+    }
+    allStrapiSequence {
       edges {
         node {
           id

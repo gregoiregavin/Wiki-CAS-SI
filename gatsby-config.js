@@ -8,13 +8,13 @@ const strapiConfig = {
   collectionTypes: [
     {
       singularName: 'activite'
-    },/*
+    },
     {
       singularName: 'concept'
     },
     {
       singularName: 'sequence'
-    } */
+    }
   ],
   singleTypes: [],
 };

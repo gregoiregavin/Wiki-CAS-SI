@@ -10,6 +10,7 @@
     border-bottom: solid 2px var(--color-heading);
     background-color: var(--color-background);
     transition: background-color 0.2s ease;
+    z-index: 100;
   }
   
   #main-logo {
