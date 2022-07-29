@@ -20,8 +20,6 @@ const Header = (title) => {
             if (elem.base === purpleBean) {
                 purpleBeanURL = elem.publicURL
             }
-
-            return purpleBeanURL
         })
 
         let logo = document.getElementById('main-logo')
@@ -77,11 +75,7 @@ const Header = (title) => {
             `}
             render={data => (
                 <header id='global-header'>
-                    <div
-                        role='button'
-                        onClick={() => ThemeToggler(data.allFile.nodes)}
-                        onKeyDown={ThemeToggler}
-                        tabIndex='0'>
+                    <div role='button' onClick={() => ThemeToggler(data.allFile.nodes)}>
                         <img id='main-logo' src={logoGreen} alt='a green bean' />
                     </div>
                     <h1 id='main-heading'>

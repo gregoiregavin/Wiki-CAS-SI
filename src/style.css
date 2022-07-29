@@ -54,21 +54,23 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
+  --color-primary: #57941e;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
-  --color-heading-black: black;
+  --color-heading-black: #000;
   --color-accent: #d1dce5;
+  --color-background: #fff;
 }
 
 :root.purple {
-  --color-primary: #005b99;
-  --color-text: #2e353f;
+  --color-primary: #F582A7;
+  --color-text: rgba(255, 255, 255, 0.85);
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: black;
+  --color-heading: #fff;
+  --color-heading-black: #fff;
   --color-accent: #d1dce5;
+  --color-background: #390c3b;
 }
 
 /* HTML elements */
@@ -84,6 +86,8 @@ html {
   font-size: var(--fontSize-root);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+  transition: background-color 0.2s ease;
 }
 
 body {
