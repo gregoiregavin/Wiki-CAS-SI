@@ -2,31 +2,28 @@ import * as React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { useEffect } from 'react'
 import logoGreen from '../../images/bean-green.png'
-import logoPurple from '../../images/bean-purple.png'
 import searchIcon from '../../images/search-icon.png'
 import './header.css'
 
-const Header = ( title ) => {
+const Header = (title) => {
 
     let root = document.documentElement
     let currentTheme = ''
 
-    const greenBean = 'bean-icon.png'
     const purpleBean = 'bean-purple.png'
-
     let purpleBeanURL = ''
 
-    const ThemeToggler = ( nodes ) => {
+    const ThemeToggler = (nodes) => {
 
-        nodes.map(function(elem) {  
-            
+        nodes.map(function (elem) {
+
             if (elem.base === purpleBean) {
                 purpleBeanURL = elem.publicURL
             }
 
-            console.log(purpleBeanURL)
+            return purpleBeanURL
         })
-        
+
         let logo = document.getElementById('main-logo')
 
         if (currentTheme === '') {
@@ -35,10 +32,10 @@ const Header = ( title ) => {
             currentTheme = 'purple'
         } else {
             root.classList.toggle('purple')
-            logo.setAttribute('src','/static/bean-green-edecc346d06908e8231864d196817b17.png')
+            logo.setAttribute('src', '/static/bean-green-edecc346d06908e8231864d196817b17.png')
             currentTheme = ''
         }
-        
+
     }
 
     useEffect(() => {
@@ -80,14 +77,13 @@ const Header = ( title ) => {
             `}
             render={data => (
                 <header id='global-header'>
-                    <img 
-                        id='main-logo' 
-                        src={logoGreen} 
-                        alt='a green bean' 
-                        onClick={() => ThemeToggler(data.allFile.nodes)}
-                        onKeyDown={ThemeToggler} 
+                    <div
                         role='button'
-                    />
+                        onClick={() => ThemeToggler(data.allFile.nodes)}
+                        onKeyDown={ThemeToggler}
+                        tabIndex='0'>
+                        <img id='main-logo' src={logoGreen} alt='a green bean' />
+                    </div>
                     <h1 id='main-heading'>
                         <Link to='/'>{title.title}</Link>
                     </h1>
