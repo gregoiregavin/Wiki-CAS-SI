@@ -37,6 +37,7 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: strapiConfig,
     },
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
