@@ -8,9 +8,9 @@ import { useEffect } from 'react';
 const Explorer = ({ data, location }) => {
 
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const allActivites = data.allStrapiActivite?.edges
-  const allConcepts = data.allStrapiConcept?.edges
-  const allSequences = data.allStrapiSequence?.edges
+  //const allActivites = data.allStrapiActivite?.edges
+  //const allConcepts = data.allStrapiConcept?.edges
+  //const allSequences = data.allStrapiSequence?.edges
 
   const GridConstruction = () => {
 
@@ -55,7 +55,7 @@ const Explorer = ({ data, location }) => {
 
     return (
       <div className='grid' style={{ border: '1px solid #333', minHeight: '531.251px' }}>
-        {
+       {/*  {
           allActivites ? 
             allActivites.map(activite => (
               <a href={activite.node.slug} key={activite.node.id}>
@@ -87,7 +87,7 @@ const Explorer = ({ data, location }) => {
                 </span>
               </a>
             )) : ''
-        }
+        } */}
       </div>
     )
   }
@@ -101,7 +101,7 @@ const Explorer = ({ data, location }) => {
         <button className='button' data-filter='showConcepts'>Concepts</button>
         <button className='button' data-filter='showSequences'>Séquences</button>
       </div>
-      <GridConstruction activite={allActivites} />
+      {/* <GridConstruction activite={allActivites} /> */}
     </Layout>
   )
 }
