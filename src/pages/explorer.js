@@ -8,9 +8,6 @@ import { useEffect } from 'react';
 const Explorer = ({ data, location }) => {
 
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  //const allActivites = data.allStrapiActivite?.edges
-  //const allConcepts = data.allStrapiConcept?.edges
-  //const allSequences = data.allStrapiSequence?.edges
 
   const GridConstruction = () => {
 
@@ -55,39 +52,7 @@ const Explorer = ({ data, location }) => {
 
     return (
       <div className='grid' style={{ border: '1px solid #333', minHeight: '531.251px' }}>
-       {/*  {
-          allActivites ? 
-            allActivites.map(activite => (
-              <a href={activite.node.slug} key={activite.node.id}>
-                <span style={{ display: 'block', padding: '15px'}} className='element-item' key={activite.node.id}>
-                  <h3 className='name'>{activite.node.titre}</h3>
-                  <p className='type'>Activité</p>
-                </span>
-              </a>
-            )) : ''
-        }
-        {
-          allConcepts ? 
-            allConcepts.map(concept => (
-              <a href={concept.node.slug} key={concept.node.id}>
-                <span style={{ display: 'block', padding: '15px' }} className='element-item' key={concept.node.id}>
-                  <h3 className='name'>{concept.node.titre}</h3>
-                  <p className='type'>Concept</p>
-                </span>
-              </a>
-            )) : ''
-        }
-        {
-          allSequences ?
-            allSequences.map(sequence => (
-              <a href={sequence.node.slug} key={sequence.node.id}>
-                <span style={{ display: 'block', padding: '15px' }} className='element-item' key={sequence.node.id}>
-                  <h3 className='name'>{sequence.node.titre}</h3>
-                  <p className='type'>Séquence</p>
-                </span>
-              </a>
-            )) : ''
-        } */}
+          <h1>TEST</h1>
       </div>
     )
   }
@@ -101,7 +66,6 @@ const Explorer = ({ data, location }) => {
         <button className='button' data-filter='showConcepts'>Concepts</button>
         <button className='button' data-filter='showSequences'>Séquences</button>
       </div>
-      {/* <GridConstruction activite={allActivites} /> */}
     </Layout>
   )
 }
