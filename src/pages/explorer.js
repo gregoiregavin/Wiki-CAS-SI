@@ -115,32 +115,5 @@ export const pageQuery = graphql`
         title
       }
     }
-    allStrapiActivite {
-      edges {
-        node {
-          id
-          slug
-          titre
-        }
-      }
-    }
-    allStrapiConcept {
-      edges {
-        node {
-          id
-          slug
-          titre
-        }
-      }
-    }
-    allStrapiSequence {
-      edges {
-        node {
-          id
-          slug
-          titre
-        }
-      }
-    }
   }
 `
