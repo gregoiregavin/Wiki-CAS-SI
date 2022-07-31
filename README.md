@@ -5,9 +5,9 @@
   Bean
 </h1>
 
-WIKI-CAS-SI1 (pronounce '**Bean**') is an exploration website based on open source technologies such as [Gatsby](https://www.gatsbyjs.com/) and [Strapi](https://strapi.io/). These have been choosen for their high adaptable and scalable structure for both frontend and backend users. Bean is developed at the EPFL, aiming at first to provide a tool for teaching in the [CAS pour l'enseignement de la Science Informatique en secondaire 1](https://www.epfl.ch/education/educational-initiatives/fr/le-projet-edunum-le-cas-si/cas-si).
+WIKI-CAS-SI1 (pronounce '**Bean**') is a website designed to share pedagogical content on the web. It is based on open source technologies such as [Gatsby](https://www.gatsbyjs.com/) and [Strapi](https://strapi.io/), which have been choosen for their high adaptable and scalable structure for both frontend and backend users. Bean is developed at the EPFL, aiming at first to provide a tool for teaching in the [CAS pour l'enseignement de la Science Informatique en secondaire 1](https://www.epfl.ch/education/educational-initiatives/fr/le-projet-edunum-le-cas-si/cas-si).
 
-Bean is accessible on : **[https://wiki-cas.netlify.app/](https://wiki-cas.netlify.app/)**
+Alpha version : **[https://wiki-cas.netlify.app/](https://wiki-cas.netlify.app/)**
 
 Back-end is also testable online, please ask for an access.
 
