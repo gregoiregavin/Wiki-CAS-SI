@@ -4,8 +4,6 @@ import { useEffect } from 'react'
 import logoGreen from '../../images/bean-green.png'
 import './header.css'
 
-const isBrowser = typeof window !== "undefined"
-
 const Header = (title) => {
 
     let currentTheme = ''
@@ -44,7 +42,6 @@ const Header = (title) => {
         let mainLogo = document.getElementById('main-logo')
         let mainHeading = document.getElementById('main-heading')
         let mainNav = document.getElementById('main-nav')
-        let searchIcon = document.getElementById('search-icon')
 
         window.onscroll = function () {
 
@@ -53,13 +50,11 @@ const Header = (title) => {
                 mainLogo.classList.add('scrolled')
                 mainHeading.classList.add('scrolled')
                 mainNav.classList.add('hidden')
-                searchIcon.classList.add('scrolled')
             } else {
                 globalHeader.classList.remove('scrolled')
                 mainLogo.classList.remove('scrolled')
                 mainHeading.classList.remove('scrolled')
                 mainNav.classList.remove('hidden')
-                searchIcon.classList.remove('scrolled')
             }
         }
     });
