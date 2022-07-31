@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 import Isotope from 'isotope-layout/js/isotope';
 import { useEffect } from 'react';
 
-const Homepage = ({ data, location }) => {
+const Explorer = ({ data, location }) => {
 
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const allActivites = data.allStrapiActivite?.edges
@@ -15,6 +15,8 @@ const Homepage = ({ data, location }) => {
   const GridConstruction = () => {
 
     useEffect(() => {
+
+      console.log('yo')
 
       // Isotope initialisation
       let iso = new Isotope('.grid', {
@@ -56,10 +58,10 @@ const Homepage = ({ data, location }) => {
     return (
       <div className='grid' style={{ border: '1px solid #333', minHeight: '531.251px' }}>
         {
-          allActivites ?
+          allActivites ? 
             allActivites.map(activite => (
               <a href={activite.node.slug} key={activite.node.id}>
-                <span style={{ display: 'block', padding: '15px' }} className='element-item' key={activite.node.id}>
+                <span style={{ display: 'block', padding: '15px'}} className='element-item' key={activite.node.id}>
                   <h3 className='name'>{activite.node.titre}</h3>
                   <p className='type'>Activité</p>
                 </span>
@@ -67,7 +69,7 @@ const Homepage = ({ data, location }) => {
             )) : ''
         }
         {
-          allConcepts ?
+          allConcepts ? 
             allConcepts.map(concept => (
               <a href={concept.node.slug} key={concept.node.id}>
                 <span style={{ display: 'block', padding: '15px' }} className='element-item' key={concept.node.id}>
@@ -101,12 +103,12 @@ const Homepage = ({ data, location }) => {
         <button className='button' data-filter='showConcepts'>Concepts</button>
         <button className='button' data-filter='showSequences'>Séquences</button>
       </div>
-      <GridConstruction activite={allActivites} />
+      <GridConstruction />
     </Layout>
   )
 }
 
-export default Homepage
+export default Explorer
 
 export const pageQuery = graphql`
   query {
