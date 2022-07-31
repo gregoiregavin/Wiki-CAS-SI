@@ -2,18 +2,20 @@ import * as React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { useEffect } from 'react'
 import logoGreen from '../../images/bean-green.png'
-import searchIcon from '../../images/search-icon.png'
 import './header.css'
+
+const isBrowser = typeof window !== "undefined"
 
 const Header = (title) => {
 
-    let root = document.documentElement
     let currentTheme = ''
 
     const purpleBean = 'bean-purple.png'
     let purpleBeanURL = ''
 
     const ThemeToggler = (nodes) => {
+
+        let root = document.documentElement
 
         nodes.map(function (elem) {
 
@@ -37,6 +39,7 @@ const Header = (title) => {
     }
 
     useEffect(() => {
+        
         let globalHeader = document.getElementById('global-header')
         let mainLogo = document.getElementById('main-logo')
         let mainHeading = document.getElementById('main-heading')
@@ -83,13 +86,9 @@ const Header = (title) => {
                     </h1>
                     <ul id='main-nav'>
                         <li>
-                            <Link to='/explorer'>explorer</Link>
-                        </li>
-                        <li>
                             <Link to='/a-propos'>a propos</Link>
                         </li>
                     </ul>
-                    <img id='search-icon' src={searchIcon} width='25' alt='search icon' />
                 </header>
             )}
         />
