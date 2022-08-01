@@ -85,23 +85,17 @@ _If you get stucked at Node, Git or Gatsby CLI installation, additional help can
     ```
 
 ## :triangular_ruler: Configuration
-    
-## :turtle: Roadmap
-- [ ] coucou
-- [ ] casd
-- [x] asdsad
+Installation d'une instance Strapi en local [...]
 
 ## :purple_heart: Philosophy
 
-Bean is a project with some philosophical and societal values we intent to share in the field of education.
-
 choix des technos : 
 
-Inclusive
-Simple UX/UI
-Open Data
-User rights management
-Scalability
-Portability
-Accessibility
-Vanilla
+- Inclusive
+- Simple UX/UI
+- Open Data
+- User rights management
+- Scalability
+- Portability
+- Accessibility
+- Vanilla
