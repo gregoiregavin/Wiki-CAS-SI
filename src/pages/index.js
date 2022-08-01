@@ -58,8 +58,8 @@ const Explorer = ({ data, location }) => {
         {
           allActivites ? 
             allActivites.map(activite => (
-              <a href={activite.node.slug} key={activite.node.id}>
-                <span style={{ display: 'block', padding: '15px'}} className='element-item' key={activite.node.id}>
+              <a href={activite.node.slug} key={activite.node.id} className='element-item'>
+                <span style={{ display: 'block', padding: '15px'}} key={activite.node.id}>
                   <h3 className='name'>{activite.node.titre}</h3>
                   <p className='type'>Activité</p>
                 </span>
@@ -69,8 +69,8 @@ const Explorer = ({ data, location }) => {
         {
           allConcepts ? 
             allConcepts.map(concept => (
-              <a href={concept.node.slug} key={concept.node.id}>
-                <span style={{ display: 'block', padding: '15px' }} className='element-item' key={concept.node.id}>
+              <a href={concept.node.slug} key={concept.node.id} className='element-item'>
+                <span style={{ display: 'block', padding: '15px' }} key={concept.node.id}>
                   <h3 className='name'>{concept.node.titre}</h3>
                   <p className='type'>Concept</p>
                 </span>

@@ -273,6 +273,10 @@ a:focus {
   width: var(--maxWidth-4xl);
 }
 
+.grid {
+  background-color: aliceblue;
+}
+
 .footer {
   flex-shrink: 0;
   display: flex;
