@@ -36,29 +36,6 @@ const Header = (title) => {
 
     }
 
-    useEffect(() => {
-        
-        let globalHeader = document.getElementById('global-header')
-        let mainLogo = document.getElementById('main-logo')
-        let mainHeading = document.getElementById('main-heading')
-        let mainNav = document.getElementById('main-nav')
-
-        window.onscroll = function () {
-
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                globalHeader.classList.add('scrolled')
-                mainLogo.classList.add('scrolled')
-                mainHeading.classList.add('scrolled')
-                mainNav.classList.add('hidden')
-            } else {
-                globalHeader.classList.remove('scrolled')
-                mainLogo.classList.remove('scrolled')
-                mainHeading.classList.remove('scrolled')
-                mainNav.classList.remove('hidden')
-            }
-        }
-    });
-
     return (
         <StaticQuery
             query={graphql`
@@ -79,6 +56,9 @@ const Header = (title) => {
                     <h1 id='main-heading'>
                         <Link to='/'>{title.title}</Link>
                     </h1>
+                    <div className='tagline-wrapper'>
+                        <p className='tagline'>CAS pour l'enseignement de la SI en secondaire 1</p>
+                    </div>
                     <ul id='main-nav'>
                         <li>
                             <Link to='/a-propos'>a propos</Link>

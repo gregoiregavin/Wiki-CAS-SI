@@ -4,7 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 const Footer = () => (
     <footer className='footer'>
         <p>
-            Dernière mise à jour: { new Date().getDate() }.{ new Date().getMonth() }.{ new Date().getFullYear() }
+            Dernière mise à jour: { new Date().getDate() }.{ new Date().getMonth()+1 }.{ new Date().getFullYear() }
         </p>
         <a href='https://github.com/gregoiregavin/Wiki-CAS-SI' target='_blank' rel='noreferrer' style={{marginLeft: 'auto'}}>
             <StaticImage

@@ -9,9 +9,9 @@
   --maxWidth-xl: 36rem;
   --maxWidth-2xl: 42rem;
   --maxWidth-3xl: 48rem;
-  --maxWidth-4xl: 56rem;
+  --maxWidth-4xl: 72rem;
   --maxWidth-full: "100%";
-  --maxWidth-wrapper: var(--maxWidth-4xl);
+  --maxWidth-wrapper: var(--maxWidth-full);
   --spacing-px: "1px";
   --spacing-0: 0;
   --spacing-1: 0.25rem;
@@ -60,7 +60,7 @@
   --color-heading: #1a202c;
   --color-heading-black: #000;
   --color-accent: #d1dce5;
-  --color-background: #fff;
+  --color-background: #f7f7f7;
 }
 
 :root.purple {
@@ -260,18 +260,32 @@ a:focus {
 }
 
 .global-wrapper {
+  display: flex;
+  flex-direction: column;
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-10) var(--spacing-5);
+  height: 100vh;
 }
 
-.global-wrapper[data-is-root-path='true'] .bio {
-  margin-bottom: var(--spacing-20);
+.content {
+  flex: 1 0 auto;
+  align-self: center;
+  width: var(--maxWidth-4xl);
+}
+
+.grid {
+  background-color: aliceblue;
 }
 
 .footer {
+  flex-shrink: 0;
   display: flex;
-  border-top: solid 2px var(--color-heading);
+  border-top: solid 1px var(--color-heading);
+  padding: var(--spacing-3) var(--spacing-4);
+}
+
+.footer p {
+  margin: 0;
 }
 
 .post-list-item {

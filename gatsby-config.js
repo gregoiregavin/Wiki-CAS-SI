@@ -21,7 +21,7 @@ const strapiConfig = {
 
 module.exports = {
   siteMetadata: {
-    title: `bean`,
+    title: `wiki`,
     author: {
       name: `Grégoire Gavin`,
       summary: `qui essaie de s'en sortir avec tous ces stacks.`,
